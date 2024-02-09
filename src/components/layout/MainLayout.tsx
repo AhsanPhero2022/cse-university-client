@@ -1,27 +1,37 @@
 import { Layout, Menu } from "antd";
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
-import { createElement } from "react";
+// import {
+//   UploadOutlined,
+//   UserOutlined,
+//   VideoCameraOutlined,
+// } from "@ant-design/icons";
+// import { createElement } from "react";
 
 const { Header, Content, Footer, Sider } = Layout;
 
 const items = [
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  UserOutlined,
-].map((icon, index) => ({
-  key: String(index + 1),
-  icon: createElement(icon),
-  label: `nav ${index + 1}`,
-}));
+  {
+    key: "sdfasdf",
+    label: "Option 1",
+  },
+  {
+    key: "sdasdf",
+    label: "Abir",
+    children: [
+      {
+        key: "helo",
+        label: "asia",
+      },
+    ],
+  },
+  {
+    key: "sdfdf",
+    label: "Option 1",
+  },
+];
 
 const MainLayout = () => {
   return (
-    <Layout>
+    <Layout style={{ height: "100vh" }}>
       <Sider
         breakpoint="lg"
         collapsedWidth="0"
@@ -32,7 +42,25 @@ const MainLayout = () => {
           console.log(collapsed, type);
         }}
       >
-        <div className="demo-logo-vertical" />
+        <div
+          style={{
+            color: "white",
+            fontWeight: "bold",
+            fontSize: "20px",
+            padding: "10px",
+            backgroundColor: "#1890ff",
+            textAlign: "center",
+            borderRadius: "5px",
+            marginBottom: "10px",
+            marginTop: "10px",
+            cursor: "pointer",
+            userSelect: "none",
+            boxShadow: "0px 0px 10px #1890ff",
+            transition: "all 0.3s",
+          }}
+        >
+          CSE-UNI
+        </div>
         <Menu
           theme="dark"
           mode="inline"
