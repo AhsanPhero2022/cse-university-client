@@ -1,4 +1,5 @@
 import { Layout, Menu } from "antd";
+import { NavLink } from "react-router-dom";
 // import {
 //   UploadOutlined,
 //   UserOutlined,
@@ -10,16 +11,24 @@ const { Header, Content, Footer, Sider } = Layout;
 
 const items = [
   {
-    key: "sdfasdf",
-    label: "Option 1",
+    key: "Dashboard",
+    label: <NavLink to="/admin/dashboard">Dashboard</NavLink>,
   },
   {
-    key: "sdasdf",
-    label: "Abir",
+    key: "User Management",
+    label: "User Management",
     children: [
       {
-        key: "helo",
-        label: "asia",
+        key: "Create Admin",
+        label: <NavLink to="/admin/create-admin">Create Admin</NavLink>,
+      },
+      {
+        key: "Create Faculty",
+        label: <NavLink to="/admin/create-faculty">Create Admin</NavLink>,
+      },
+      {
+        key: "Create Admin",
+        label: <NavLink to="/admin/create-student">Create Admin</NavLink>,
       },
     ],
   },
