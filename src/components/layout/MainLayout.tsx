@@ -1,11 +1,5 @@
 import { Layout, Menu } from "antd";
-import { NavLink } from "react-router-dom";
-// import {
-//   UploadOutlined,
-//   UserOutlined,
-//   VideoCameraOutlined,
-// } from "@ant-design/icons";
-// import { createElement } from "react";
+import { NavLink, Outlet } from "react-router-dom";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -27,14 +21,10 @@ const items = [
         label: <NavLink to="/admin/create-faculty">Create Admin</NavLink>,
       },
       {
-        key: "Create Admin",
+        key: "Create Student",
         label: <NavLink to="/admin/create-student">Create Admin</NavLink>,
       },
     ],
-  },
-  {
-    key: "sdfdf",
-    label: "Option 1",
   },
 ];
 
@@ -86,7 +76,7 @@ const MainLayout = () => {
               minHeight: 360,
             }}
           >
-            <h1>cse university</h1>
+            <Outlet />
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
